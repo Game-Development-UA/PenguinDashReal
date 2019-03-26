@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyAfter : MonoBehaviour
+public class WorldTile : MonoBehaviour
 {
     // Start is called before the first frame update
-	public int afterTime;
-
     void Start()
     {
+        
     }
 
-    public void Destroy(){
-       Destroy(this.gameObject, afterTime); 
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
