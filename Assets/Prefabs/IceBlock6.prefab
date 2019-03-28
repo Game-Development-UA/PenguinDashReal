@@ -120,7 +120,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!1 &3216058708221895127
 GameObject:
@@ -242,7 +242,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!1 &4122343423103156569
 GameObject:
@@ -364,7 +364,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!1 &4731581142623403326
 GameObject:
@@ -486,7 +486,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!1 &6086882550323084834
 GameObject:
@@ -608,7 +608,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!1 &6625983211701890209
 GameObject:
@@ -730,7 +730,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!1 &8564537718215889726
 GameObject:
@@ -852,7 +852,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!1 &8954455939940455782
 GameObject:

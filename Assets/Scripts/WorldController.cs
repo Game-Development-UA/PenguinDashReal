@@ -8,8 +8,9 @@ public class WorldController : MonoBehaviour
 	public WorldTile[] tiles;
 	public Transform bumpers;
 	public int numTiles;
-	float runningHeight = 0f;
+	float runningHeight = 20f;
 	public Rigidbody body;
+	public Transform bodyT;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +29,9 @@ public class WorldController : MonoBehaviour
 			WorldTile randomTile = tiles[Random.Range(0, tiles.Length)];
 			WorldTile newTile = Instantiate<WorldTile>( randomTile );
 			Transform bumperRender = Instantiate<Transform>( bumpers );
-			bumperRender.position = body.position + new Vector3(0f, 3f, runningHeight + 10);
-			newTile.transform.position = body.position + new Vector3( 0f, 3f, runningHeight );
-			runningHeight += 10;
+			bumperRender.position = new Vector3(0f, bodyT.position.y, runningHeight + bodyT.position.z + 10);
+			newTile.transform.position = new Vector3(0f, bodyT.position.y, runningHeight + bodyT.position.z);
+			runningHeight += Random.Range(45f, 60f);
 		}    	
     }
 }

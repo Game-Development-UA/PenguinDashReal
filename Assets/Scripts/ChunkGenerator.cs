@@ -7,7 +7,7 @@ public class ChunkGenerator : MonoBehaviour
 	public GameObject nextChunk;
 	public DestroyAfter parent;
 	public Transform nextChunkSpawnLoc;
-	public WorldController gen;
+//	public WorldController gen;
 	bool hasGenerated = false;
 
 	void OnTriggerEnter( Collider otherCol ) {
@@ -15,7 +15,7 @@ public class ChunkGenerator : MonoBehaviour
 			GameObject newChunk = Instantiate<GameObject>( nextChunk );
 			newChunk.transform.position = nextChunkSpawnLoc.position;
 			newChunk.transform.rotation = nextChunkSpawnLoc.rotation;
-			gen.Generate();
+		//	gen.Generate();
 			parent.Destroy();
 			hasGenerated = true;
 		}
