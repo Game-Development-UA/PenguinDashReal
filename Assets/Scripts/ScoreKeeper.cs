@@ -5,11 +5,19 @@ using TMPro;
 
 public class ScoreKeeper : MonoBehaviour
 {
-	public TextMeshPro label;
-	public int score;
+	public TextMeshProUGUI label;
+	float score;
 
-	public void UpdateScore( int newScore ) {
-		score = newScore;
-		label.text = score.ToString();
+	public MovePenguin player;
+
+	void FixedUpdate() {
+		score += player.body.velocity.z;
+
+		label.text = ((int)score).ToString();
 	}
+
+	// public void UpdateScore() {
+	// 	score = newScore;
+		
+	// }
 }
