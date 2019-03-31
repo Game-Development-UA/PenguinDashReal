@@ -9,7 +9,7 @@ public class StartGame : MonoBehaviour
 
 	public void Begin() {
 		player.body.isKinematic = false;
-
+		GameObject.Find("TitleText").SetActive(false);
 		Destroy( startUI );
 	}
 }
