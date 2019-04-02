@@ -11,5 +11,6 @@ public class StartGame : MonoBehaviour
 		player.body.isKinematic = false;
 		GameObject.Find("TitleText").SetActive(false);
 		Destroy( startUI );
+		player.started = true;
 	}
 }

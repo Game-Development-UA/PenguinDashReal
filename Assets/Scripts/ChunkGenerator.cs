@@ -12,6 +12,7 @@ public class ChunkGenerator : MonoBehaviour
 		MovePenguin player = otherCol.gameObject.GetComponent<MovePenguin>();
 
 		if( player != null ) {
+			Debug.Log("Generating chunk");
 			GameObject newChunk = Instantiate<GameObject>( nextChunk );
 			newChunk.transform.position = nextChunkSpawnLoc.position;
 			// newChunk.transform.rotation = nextChunkSpawnLoc.rotation;

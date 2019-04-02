@@ -11,13 +11,9 @@ public class ScoreKeeper : MonoBehaviour
 	public MovePenguin player;
 
 	void FixedUpdate() {
-		score += player.body.velocity.z;
-
-		label.text = ((int)score).ToString();
+		if(!player.dead){
+			score += player.body.velocity.z;
+			label.text = ((int)score).ToString();
+		}
 	}
-
-	// public void UpdateScore() {
-	// 	score = newScore;
-		
-	// }
 }

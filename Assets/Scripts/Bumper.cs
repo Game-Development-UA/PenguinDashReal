@@ -8,7 +8,7 @@ public class Bumper : MonoBehaviour
 
 	void OnCollisionEnter( Collision col ) {
 		print( "Bumper hit " + col.gameObject.name );
-		if( col.gameObject.name == "Penguin" ) {
+		if( col.gameObject.name == "penguin" ) {
 			col.rigidbody.AddForce( forceDir, ForceMode.Impulse );
 		}
 	}
