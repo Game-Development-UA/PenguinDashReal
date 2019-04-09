@@ -8,6 +8,8 @@ public class PenguinAnimatorController : MonoBehaviour
     public GameObject Target;
     public MovePenguin player;
     public PlayDeathSound deathSound;
+    public PlayGunSound gunSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class PenguinAnimatorController : MonoBehaviour
 
 	public void attack(){
 		myAnimator.SetBool("attack_01", true);
+		gunSound.PlaySound();
 	}
 
 	public void die(){
