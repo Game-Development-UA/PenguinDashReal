@@ -446,7 +446,6 @@ MonoBehaviour:
   weaponRange: 50
   fireRate: 0.25
   gunEnd: {fileID: 1934121601}
-  fpsCam: {fileID: 236992177}
   laserLine: {fileID: 1934121602}
   explodeEffectsPrefab: {fileID: 4576539243005159211, guid: 83293d19d188b4720b8c61805bce4172,
     type: 3}
@@ -1296,6 +1295,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8954455939940455782, guid: 949fbf10d1dcf43a3a57defd87e838a6,
         type: 3}
+    - target: {fileID: 9180887106363582926, guid: ffeb427ddac8e4c088cd61944433971b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a74e88492fa30e540a88a0a28e6dd93c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffeb427ddac8e4c088cd61944433971b, type: 3}
 --- !u!1 &998405524

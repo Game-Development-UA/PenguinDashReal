@@ -13,18 +13,12 @@ public class MovePenguin : MonoBehaviour
     float jumpTimer = 0f;
     float runTimer = 0f;
     float shootTimer = 0f;
-    Animator myAnimator;
     public GameObject Target;
     public bool dead = false;
     public bool started = false;
     bool isRunning = false;
     public PenguinAnimatorController penguinAnimator;
-
-
     float xInput;
-
-    public void Start(){
-    }
 
 
     void Update(){

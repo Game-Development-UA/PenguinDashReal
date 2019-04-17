@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GunShooter : MonoBehaviour
 {
@@ -9,54 +10,46 @@ public class GunShooter : MonoBehaviour
 	public float fireRate;
 	RaycastHit hit;
 	public Transform gunEnd;
-    public Transform fpsCam;
     private WaitForSeconds shotDuration = new WaitForSeconds(.07f);
-  //  private AudioSource gunAudio;
     public LineRenderer laserLine;
     private float nextFire;
     public GameObject explodeEffectsPrefab;
+    private Action<RaycastHit> gunAction;
 
 
 
 	//Ray shootingRay = new Ray(transform,porition, new Vector)
     // Start is called before the first frame update
-    void Start()
-    {
-        //laserLine = GetComponent<LineRenderer>();
-        // gunAudio = GetComponent<AudioSource>();
-        // fpsCam = GetComponentInParent<Camera> ();       
+    void Start() {
+         gunAction = handleCubeDestruction;
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
      
 		if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire) {
 		     nextFire = Time.time + fireRate;
 		     StartCoroutine(ShotEffect());
-		     Vector3 rayOrigin = gunEnd.position;// + new Vector3(0.0f, 0.0f, 4.0f);//fpsCam.ViewportToWorldPoint (new Vector3(0.5f, 0.5f, 4.0f));
+		     Vector3 rayOrigin = gunEnd.position;
              RaycastHit hit;
-             //laserLine.SetPosition (0, gunEnd.position);
-
-            if (Physics.Raycast (rayOrigin, gunEnd.forward, out hit, weaponRange)) {
-               // laserLine.SetPosition (1, hit.point);
-               // print(hit.rigidbody.name);
-                if(hit.rigidbody.name.Substring(0,4) == "Cube"){
-                	print(hit.rigidbody.name.Substring(0,4));
-                	Instantiate(explodeEffectsPrefab, hit.rigidbody.position, hit.rigidbody.rotation);
-                	Destroy(hit.rigidbody.gameObject);
-                }
-
+             if (Physics.Raycast (rayOrigin, gunEnd.forward, out hit, weaponRange)) {
+               // if(hit.rigidbody != null){
+                    if(hit.rigidbody.name.Substring(0,4) == "Cube"){
+                	   print(hit.rigidbody.name.Substring(0,4));
+                        gunAction.Invoke(hit);
+                    }
+               //}
             }
-            // else {
-            //     laserLine.SetPosition (1, rayOrigin + (fpsCam.transform.forward * weaponRange));
-            // }
 		}
 
     }
 
+    void handleCubeDestruction(RaycastHit hit) {
+        Instantiate(explodeEffectsPrefab, hit.rigidbody.position, hit.rigidbody.rotation);
+        Destroy(hit.rigidbody.gameObject);       
+    }
+
     private IEnumerator ShotEffect() {
-    	//gunAudio.Play();
     	laserLine.enabled = true;
     	yield return shotDuration;
     	laserLine.enabled = false;
