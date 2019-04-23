@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4888212948364003895}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Obstacle Spawn Loc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2812123756565250551}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Obstacle Spawn Loc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 49662466921549321}
   - component: {fileID: 7383909500400267935}
   - component: {fileID: 4540622537139124406}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Gutter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseUI: {fileID: 8559089874849045855, guid: 7c6173ed03622456da1fa99ff6bd7ce8, type: 3}
+  death: {fileID: 0}
 --- !u!1 &2934826457975398472
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1739743995579923057}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Obstacle Spawn Loc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1800943744965837224}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Obstacle Spawn Loc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5531280077481590247}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Obstacle Spawn Loc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5133117781643068891}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Obstacle Spawn Locations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 524250435500867927}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Obstacle Spawn Loc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,9 +333,9 @@ GameObject:
   - component: {fileID: 9180887105325912036}
   - component: {fileID: 9180887105325912032}
   - component: {fileID: 9180887105325912033}
-  - component: {fileID: 9180887105325912038}
   - component: {fileID: 9180887105325912039}
-  m_Layer: 0
+  - component: {fileID: 7060686291841876225}
+  m_Layer: 2
   m_Name: Chunk Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,20 +401,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9180887105325912038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9180887105325912037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5a130a0f3140bd909a019ae89af88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextChunk: {fileID: 9180887106830701073}
-  nextChunkSpawnLoc: {fileID: 9180887106415299236}
 --- !u!65 &9180887105325912039
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -427,6 +414,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7060686291841876225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180887105325912037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf5a130a0f3140bd909a019ae89af88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextChunk: {fileID: 9180887106830701073}
+  nextChunkSpawnLoc: {fileID: 9180887106415299236}
 --- !u!1 &9180887106363582925
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +440,7 @@ GameObject:
   - component: {fileID: 9180887106363582921}
   - component: {fileID: 9180887106363582926}
   - component: {fileID: 9180887106363582927}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9180887106415299236}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Next Chunk Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +563,7 @@ GameObject:
   - component: {fileID: 9180887106830701075}
   - component: {fileID: 9180887106830701072}
   - component: {fileID: 2541887726054250564}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlatformParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}

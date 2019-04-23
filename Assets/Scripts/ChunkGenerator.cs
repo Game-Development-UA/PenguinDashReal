@@ -8,6 +8,7 @@ public class ChunkGenerator : MonoBehaviour
 	// public DestroyAfter parent;
 	public Transform nextChunkSpawnLoc;
 
+
 	void OnTriggerEnter( Collider otherCol ) {
 		MovePenguin player = otherCol.gameObject.GetComponent<MovePenguin>();
 
