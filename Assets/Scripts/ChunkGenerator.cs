@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChunkGenerator : MonoBehaviour
 {
-	public GameObject nextChunk;
+	public Chunk nextChunk;
 	// public DestroyAfter parent;
 	public Transform nextChunkSpawnLoc;
 
@@ -14,7 +14,7 @@ public class ChunkGenerator : MonoBehaviour
 
 		if( player != null ) {
 			Debug.Log("Generating chunk");
-			GameObject newChunk = Instantiate<GameObject>( nextChunk );
+			Chunk newChunk = Instantiate<Chunk>( nextChunk );
 			newChunk.transform.position = nextChunkSpawnLoc.position;
 			// newChunk.transform.rotation = nextChunkSpawnLoc.rotation;
 			// parent.Destroy();
